@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jose Melo | Junior Web Developer</title>
+  <meta name="description" content="Portfolio virtual de Jose Melo, junior web developer enfocado en frontend, full-stack, datos e inteligencia artificial." />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="nav" id="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a class="nav__logo" href="#top">JM</a>
+        <nav>
+          <ul class="nav__links" aria-label="Menú principal">
+            <li><a href="#studies">Estudios</a></li>
+            <li><a href="https://github.com/GregDev08" target="_blank" rel="noopener">Proyectos</a></li>
+            <li><a href="#experience">Experiencia</a></li>
+          </ul>
+        </nav>
+        <a href="mailto:jogregorio297@gmail.com" class="nav__cta">Contactar</a>
+        <button class="nav__hamburger" id="hamburger" aria-label="Abrir menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav__mobile" id="mobileMenu">
+    <a href="#studies" onclick="closeMobile()">Estudios</a>
+    <a href="https://github.com/GregDev08" target="_blank" rel="noopener" onclick="closeMobile()">Proyectos</a>
+    <a href="#experience" onclick="closeMobile()">Experiencia</a>
+    <a href="mailto:jogregorio297@gmail.com" onclick="closeMobile()">Contactar</a>
+  </nav>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero__content">
+        <p class="hero__eyebrow">Jose Melo - Madrid</p>
+
+        <h1 class="hero__title" id="heroTitle">
+          JUNIOR<br />
+          WEB <em>DEV</em><br />
+          FULL STACK
+        </h1>
+
+        <p class="hero__desc reveal">
+          Desarrollo interfaces responsive y aplicaciones web con HTML, CSS,
+          JavaScript y Python. Actualmente construyo proyectos full-stack
+          integrando datos e inteligencia artificial.
+        </p>
+
+        <div class="hero__actions reveal">
+          <a href="https://github.com/GregDev08" class="btn-primary" target="_blank" rel="noopener">
+            Ver GitHub
+            <span aria-hidden="true">-&gt;</span>
+          </a>
+          <a href="assets/CV-Jose-Melo.pdf" class="btn-ghost" target="_blank" rel="noopener">Abrir CV</a>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="hero__scroll">
+          <div class="hero__scroll-line"></div>
+          Scroll
+        </div>
+      </div>
+
+      <div class="hero__counter" aria-hidden="true">01</div>
+    </section>
+
+    <div class="marquee-wrap" aria-hidden="true">
+      <div class="marquee-track" id="marqueeTrack">
+        <span class="marquee-item">HTML5 <span>*</span></span>
+        <span class="marquee-item">CSS3 <span>*</span></span>
+        <span class="marquee-item">JavaScript <span>*</span></span>
+        <span class="marquee-item">Python <span>*</span></span>
+        <span class="marquee-item">FastAPI <span>*</span></span>
+        <span class="marquee-item">PostgreSQL <span>*</span></span>
+        <span class="marquee-item">MySQL <span>*</span></span>
+        <span class="marquee-item">GitHub <span>*</span></span>
+        <span class="marquee-item">HTML5 <span>*</span></span>
+        <span class="marquee-item">CSS3 <span>*</span></span>
+        <span class="marquee-item">JavaScript <span>*</span></span>
+        <span class="marquee-item">Python <span>*</span></span>
+        <span class="marquee-item">FastAPI <span>*</span></span>
+        <span class="marquee-item">PostgreSQL <span>*</span></span>
+        <span class="marquee-item">MySQL <span>*</span></span>
+        <span class="marquee-item">GitHub <span>*</span></span>
+      </div>
+    </div>
+
+    <section class="section profile" id="profile">
+      <div class="container">
+        <div class="profile__grid">
+          <div>
+            <p class="section__number reveal">02 - Perfil</p>
+            <h2 class="section__title reveal">Código con<br />base práctica</h2>
+          </div>
+          <div class="profile__copy reveal">
+            <p>
+              Junior Web Developer con enfoque en frontend y tecnologías web.
+              Durante los últimos dos años he desarrollado mis habilidades con
+              aprendizaje autodidacta y formación orientada a desarrollo web.
+            </p>
+            <p>
+              Me centro en traducir diseños a interfaces responsive, cuidando
+              estructura, detalle y buenas prácticas de código. También trabajo
+              con backend ligero, APIs REST y bases de datos relacionales.
+            </p>
+          </div>
+        </div>
+
+        <div class="stats-list profile__stats">
+          <div class="reveal">
+            <div class="stat__number" data-count="2">0</div>
+            <div class="stat__label">Años aprendiendo</div>
+          </div>
+          <div class="reveal">
+            <div class="stat__number" data-count="8">0</div>
+            <div class="stat__label">Tecnologías base</div>
+          </div>
+          <div class="reveal">
+            <div class="stat__number" data-count="1">0</div>
+            <div class="stat__label">Bootcamp activo</div>
+          </div>
+          <div class="reveal">
+            <div class="stat__number" data-count="100">0</div>
+            <div class="stat__label">Actitud práctica</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="studies">
+      <div class="container">
+        <div class="section__header">
+          <div>
+            <p class="section__number reveal">03 - Estudios</p>
+            <h2 class="section__title reveal">Ruta<br />formativa</h2>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline__item reveal">
+            <span>En curso</span>
+            <h3>Bootcamp AI4Inclusion</h3>
+            <p>Análisis de datos, integración de IA y desarrollo de proyectos full-stack.</p>
+          </article>
+          <article class="timeline__item reveal">
+            <span>DAW</span>
+            <h3>FP Desarrollo de Aplicaciones Web</h3>
+            <p>Un año completado, con base en desarrollo web y aplicaciones.</p>
+          </article>
+          <article class="timeline__item reveal">
+            <span>Formación continua</span>
+            <h3>Platzi + freeCodeCamp</h3>
+            <p>Curso básico de programación y ruta Full-Stack Developer en curso.</p>
+          </article>
+          <article class="timeline__item reveal">
+            <span>Bachillerato</span>
+            <h3>Ciencias</h3>
+            <p>Formación académica previa en el Colegio San Jose.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section__header">
+          <div>
+            <p class="section__number reveal">04 - Proyectos</p>
+            <h2 class="section__title reveal">Repositorio<br />personal</h2>
+          </div>
+          <a href="https://github.com/GregDev08" class="section__link reveal" target="_blank" rel="noopener">Abrir GitHub</a>
+        </div>
+
+        <div class="projects-grid">
+          <a class="project-card reveal" href="https://github.com/GregDev08" target="_blank" rel="noopener">
+            <div class="project-card__img project-card__img--web">
+              <div class="project-card__overlay">
+                <span class="project-card__overlay-label">VER EN GITHUB -&gt;</span>
+              </div>
+            </div>
+            <div class="project-card__info">
+              <div>
+                <h3 class="project-card__title">Portfolio virtual</h3>
+                <p class="project-card__summary">Landing personal responsive sincronizada con mi CV y animada con GSAP.</p>
+              </div>
+              <span class="project-card__tag">Frontend</span>
+            </div>
+          </a>
+
+          <a class="project-card reveal" href="https://github.com/GregDev08" target="_blank" rel="noopener">
+            <div class="project-card__img project-card__img--ai">
+              <div class="project-card__overlay">
+                <span class="project-card__overlay-label">AI + DATOS -&gt;</span>
+              </div>
+            </div>
+            <div class="project-card__info">
+              <div>
+                <h3 class="project-card__title">AI4Inclusion</h3>
+                <p class="project-card__summary">Prácticas full-stack con datos e inteligencia artificial.</p>
+              </div>
+              <span class="project-card__tag">Bootcamp</span>
+            </div>
+          </a>
+
+          <a class="project-card reveal" href="https://github.com/GregDev08" target="_blank" rel="noopener">
+            <div class="project-card__img project-card__img--api">
+              <div class="project-card__overlay">
+                <span class="project-card__overlay-label">BACKEND LAB -&gt;</span>
+              </div>
+            </div>
+            <div class="project-card__info">
+              <div>
+                <h3 class="project-card__title">APIs y bases de datos</h3>
+                <p class="project-card__summary">Prácticas con Python, FastAPI, SQL, PostgreSQL y MySQL.</p>
+              </div>
+              <span class="project-card__tag">Backend</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section__header">
+          <div>
+            <p class="section__number reveal">05 - Experiencia</p>
+            <h2 class="section__title reveal">Stack<br />de lenguajes</h2>
+          </div>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card reveal">
+            <span class="skill-card__num">01</span>
+            <h3>Frontend</h3>
+            <p>HTML5, CSS3, SCSS, JavaScript ES6+ y diseño responsive.</p>
+          </article>
+          <article class="skill-card reveal">
+            <span class="skill-card__num">02</span>
+            <h3>Backend</h3>
+            <p>Python, FastAPI, APIs REST y conocimientos básicos de PHP.</p>
+          </article>
+          <article class="skill-card reveal">
+            <span class="skill-card__num">03</span>
+            <h3>Bases de datos</h3>
+            <p>PostgreSQL, SQL y MySQL para estructurar datos de aplicaciones.</p>
+          </article>
+          <article class="skill-card reveal">
+            <span class="skill-card__num">04</span>
+            <h3>Herramientas</h3>
+            <p>Git, GitHub, WordPress básico, gestión del tiempo y trabajo en equipo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cv-section" id="cv">
+      <div class="container cv-panel reveal">
+        <div>
+          <p class="section__number">06 - CV</p>
+          <h2 class="section__title">Perfil<br />en PDF</h2>
+        </div>
+        <div class="cv-panel__content">
+          <p>
+            El CV está integrado dentro del proyecto para que puedas abrirlo o
+            descargarlo desde la landing sin depender de archivos externos.
+          </p>
+          <div class="cv-panel__actions">
+            <a href="assets/CV-Jose-Melo.pdf" class="btn-primary" target="_blank" rel="noopener">Abrir CV</a>
+            <a href="assets/CV-Jose-Melo.pdf" class="btn-ghost" download>Descargar PDF</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-section" id="contact">
+      <div class="container">
+        <h2 class="cta-section__title reveal">
+          HABLEMOS<br />DE <em>CÓDIGO</em><br />Y PRODUCTO
+        </h2>
+        <p class="cta-section__sub reveal">
+          Disponible para oportunidades junior, prácticas y proyectos donde
+          pueda aportar frontend, backend ligero y ganas de construir.
+        </p>
+        <div class="contact-links reveal">
+          <a href="mailto:jogregorio297@gmail.com" class="btn-primary cta-section__email">jogregorio297@gmail.com</a>
+          <a href="tel:+34685038840" class="btn-ghost">685 038 840</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__logo">JM</div>
+        <ul class="footer__links">
+          <li><a href="https://github.com/GregDev08" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/jose-melo-ramirez-078126266/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="assets/CV-Jose-Melo.pdf" target="_blank" rel="noopener">CV</a></li>
+        </ul>
+        <p class="footer__copy">© 2026 Jose Melo. Madrid.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
