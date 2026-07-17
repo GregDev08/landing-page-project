@@ -1,320 +1,348 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jose Melo | Junior Web Developer</title>
-  <meta name="description" content="Portfolio virtual de Jose Melo, junior web developer enfocado en frontend, full-stack, datos e inteligencia artificial." />
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <title>Jose Melo | Python Developer · Data & Automation</title>
+  <meta name="description" content="Portfolio de Jose Melo, Python Developer especializado en ETL, análisis de datos, APIs y automatización de datos escalables." />
+  <meta name="keywords" content="Python Developer, Data Analyst, Data Engineer, ETL, SQL, APIs, Web Scraping, Data Analytics, Automatización" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Jose Melo | Python Developer · Data & Automation" />
+  <meta property="og:description" content="Construyo soluciones de datos fiables con Python, ETL, APIs y analítica para negocios escalables." />
+  <meta property="og:locale" content="es_ES" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Jose Melo | Python Developer · Data & Automation" />
+  <meta name="twitter:description" content="Construyo soluciones de datos fiables con Python, ETL, APIs y analítica para negocios escalables." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Fondo ambiental y partículas animadas -->
+  <div class="grid-overlay" aria-hidden="true"></div>
+  <canvas id="particles" aria-hidden="true"></canvas>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Navegación principal -->
   <header class="nav" id="nav">
-    <div class="container">
-      <div class="nav__inner">
-        <a class="nav__logo" href="#top">JM</a>
-        <nav>
-          <ul class="nav__links" aria-label="Menú principal">
-            <li><a href="#studies">Estudios</a></li>
-            <li><a href="https://github.com/GregDev08" target="_blank" rel="noopener">Proyectos</a></li>
-            <li><a href="#experience">Experiencia</a></li>
-          </ul>
-        </nav>
-        <a href="mailto:jogregorio297@gmail.com" class="nav__cta">Contactar</a>
-        <button class="nav__hamburger" id="hamburger" aria-label="Abrir menú">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
+    <div class="container nav__inner">
+      <a class="nav__logo" href="#top">
+        <span class="nav__logo-dot" aria-hidden="true"></span>
+        Jose Melo
+      </a>
+      <nav aria-label="Navegación principal">
+        <ul class="nav__links">
+          <li><a href="#about">Sobre mí</a></li>
+          <li><a href="#stack">Stack</a></li>
+          <li><a href="#projects">Proyectos</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </nav>
+      <a class="nav__cta" href="mailto:jogregorio297@gmail.com">Contactar</a>
+      <button class="nav__hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
-  <nav class="nav__mobile" id="mobileMenu">
-    <a href="#studies" onclick="closeMobile()">Estudios</a>
-    <a href="https://github.com/GregDev08" target="_blank" rel="noopener" onclick="closeMobile()">Proyectos</a>
-    <a href="#experience" onclick="closeMobile()">Experiencia</a>
-    <a href="mailto:jogregorio297@gmail.com" onclick="closeMobile()">Contactar</a>
+  <!-- Menú móvil para pantallas pequeñas -->
+  <nav class="nav__mobile" id="mobileMenu" aria-label="Menú móvil">
+    <a href="#about">Sobre mí</a>
+    <a href="#stack">Stack</a>
+    <a href="#projects">Proyectos</a>
+    <a href="#contact">Contacto</a>
+    <a href="mailto:jogregorio297@gmail.com">Contactar</a>
   </nav>
 
   <main id="top">
+    <!-- Hero principal con mensaje claro y CTA -->
     <section class="hero">
-      <div class="container hero__content">
-        <p class="hero__eyebrow">Jose Melo - Madrid</p>
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <p class="hero__eyebrow reveal">Python Developer</p>
+          <h1 class="hero__title reveal">Building scalable data solutions through Python, ETL, analytics, APIs and automation.</h1>
+          <p class="hero__subtitle reveal">I specialize in extracting, transforming and analyzing data to build reliable, scalable and business-oriented solutions using Python and modern data technologies.</p>
+          <div class="hero__actions reveal">
+            <a class="btn-primary" href="#projects">View Projects<span aria-hidden="true">→</span></a>
+            <a class="btn-ghost" href="#contact">Contact Me</a>
+          </div>
 
-        <h1 class="hero__title" id="heroTitle">
-          JUNIOR<br />
-          WEB <em>DEV</em><br />
-          FULL STACK
-        </h1>
-
-        <p class="hero__desc reveal">
-          Desarrollo interfaces responsive y aplicaciones web con HTML, CSS,
-          JavaScript y Python. Actualmente construyo proyectos full-stack
-          integrando datos e inteligencia artificial.
-        </p>
-
-        <div class="hero__actions reveal">
-          <a href="https://github.com/GregDev08" class="btn-primary" target="_blank" rel="noopener">
-            Ver GitHub
-            <span aria-hidden="true">-&gt;</span>
-          </a>
-          <a href="assets/CV-Jose-Melo.pdf" class="btn-ghost" target="_blank" rel="noopener">Abrir CV</a>
+          <ul class="hero__stats reveal" aria-label="Áreas de especialización y experiencia">
+            <li><strong>2+</strong><span>Años de experiencia</span></li>
+            <li><strong>Python</strong><span>Backend y Data</span></li>
+            <li><strong>SQL</strong><span>Consultas y modelado</span></li>
+            <li><strong>ETL</strong><span>Pipelines confiables</span></li>
+            <li><strong>APIs</strong><span>Integraciones REST</span></li>
+            <li><strong>Data Analytics</strong><span>Insights accionables</span></li>
+            <li><strong>Web Scraping</strong><span>Extracción automatizada</span></li>
+          </ul>
         </div>
-      </div>
 
-      <div class="container">
-        <div class="hero__scroll">
-          <div class="hero__scroll-line"></div>
-          Scroll
-        </div>
+        <!-- Visual de pipeline que refuerza el mensaje de datos -->
+        <aside class="hero__visual reveal" aria-hidden="true">
+          <div class="pipeline-card">
+            <div class="pipeline-card__head">
+              <span class="pipeline-card__label">pipeline.py</span>
+              <span class="pipeline-card__status"><i></i>en ejecución</span>
+            </div>
+            <div class="pipeline">
+              <div class="pipeline__node" data-node="extract">
+                <span class="pipeline__num">01</span>
+                <span class="pipeline__name">EXTRACT</span>
+                <span class="pipeline__meta">APIs · Scraping · SQL</span>
+              </div>
+              <div class="pipeline__track"><svg viewBox="0 0 240 2" preserveAspectRatio="none"><line x1="0" y1="1" x2="240" y2="1"/></svg><span class="pipeline__particle"></span></div>
+              <div class="pipeline__node" data-node="transform">
+                <span class="pipeline__num">02</span>
+                <span class="pipeline__name">TRANSFORM</span>
+                <span class="pipeline__meta">Pandas · NumPy</span>
+              </div>
+              <div class="pipeline__track"><svg viewBox="0 0 240 2" preserveAspectRatio="none"><line x1="0" y1="1" x2="240" y2="1"/></svg><span class="pipeline__particle"></span></div>
+              <div class="pipeline__node" data-node="load">
+                <span class="pipeline__num">03</span>
+                <span class="pipeline__name">INSIGHTS</span>
+                <span class="pipeline__meta">Plotly · Dashboards</span>
+              </div>
+            </div>
+            <div class="pipeline-card__log">
+              <span>→ ingest_hourly() completed</span>
+              <span>→ clean_dataset() completed</span>
+              <span>→ generate_insights() completed</span>
+            </div>
+          </div>
+        </aside>
       </div>
-
-      <div class="hero__counter" aria-hidden="true">01</div>
     </section>
 
+    <!-- Barra deslizante con palabras clave de tecnología -->
     <div class="marquee-wrap" aria-hidden="true">
-      <div class="marquee-track" id="marqueeTrack">
-        <span class="marquee-item">HTML5 <span>*</span></span>
-        <span class="marquee-item">CSS3 <span>*</span></span>
-        <span class="marquee-item">JavaScript <span>*</span></span>
-        <span class="marquee-item">Python <span>*</span></span>
-        <span class="marquee-item">FastAPI <span>*</span></span>
-        <span class="marquee-item">PostgreSQL <span>*</span></span>
-        <span class="marquee-item">MySQL <span>*</span></span>
-        <span class="marquee-item">GitHub <span>*</span></span>
-        <span class="marquee-item">HTML5 <span>*</span></span>
-        <span class="marquee-item">CSS3 <span>*</span></span>
-        <span class="marquee-item">JavaScript <span>*</span></span>
-        <span class="marquee-item">Python <span>*</span></span>
-        <span class="marquee-item">FastAPI <span>*</span></span>
-        <span class="marquee-item">PostgreSQL <span>*</span></span>
-        <span class="marquee-item">MySQL <span>*</span></span>
-        <span class="marquee-item">GitHub <span>*</span></span>
+      <div class="marquee-track">
+        <span class="marquee-item">Python · </span>
+        <span class="marquee-item">SQL · </span>
+        <span class="marquee-item">FastAPI · </span>
+        <span class="marquee-item">Pandas · </span>
+        <span class="marquee-item">ETL · </span>
+        <span class="marquee-item">PostgreSQL · </span>
+        <span class="marquee-item">Web Scraping · </span>
+        <span class="marquee-item">Data Analytics · </span>
+        <span class="marquee-item">Python · </span>
+        <span class="marquee-item">SQL · </span>
+        <span class="marquee-item">FastAPI · </span>
+        <span class="marquee-item">Pandas · </span>
       </div>
     </div>
 
-    <section class="section profile" id="profile">
-      <div class="container">
-        <div class="profile__grid">
-          <div>
-            <p class="section__number reveal">02 - Perfil</p>
-            <h2 class="section__title reveal">Código con<br />base práctica</h2>
-          </div>
-          <div class="profile__copy reveal">
-            <p>
-              Junior Web Developer con enfoque en frontend y tecnologías web.
-              Durante los últimos dos años he desarrollado mis habilidades con
-              aprendizaje autodidacta y formación orientada a desarrollo web.
-            </p>
-            <p>
-              Me centro en traducir diseños a interfaces responsive, cuidando
-              estructura, detalle y buenas prácticas de código. También trabajo
-              con backend ligero, APIs REST y bases de datos relacionales.
-            </p>
-          </div>
-        </div>
-
-        <div class="stats-list profile__stats">
-          <div class="reveal">
-            <div class="stat__number" data-count="2">0</div>
-            <div class="stat__label">Años aprendiendo</div>
-          </div>
-          <div class="reveal">
-            <div class="stat__number" data-count="8">0</div>
-            <div class="stat__label">Tecnologías base</div>
-          </div>
-          <div class="reveal">
-            <div class="stat__number" data-count="1">0</div>
-            <div class="stat__label">Bootcamp activo</div>
-          </div>
-          <div class="reveal">
-            <div class="stat__number" data-count="100">0</div>
-            <div class="stat__label">Actitud práctica</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="studies">
+    <!-- Sección sobre mí con énfasis en experiencia analítica y liderazgo -->
+    <section class="section" id="about">
       <div class="container">
         <div class="section__header">
           <div>
-            <p class="section__number reveal">03 - Estudios</p>
-            <h2 class="section__title reveal">Ruta<br />formativa</h2>
+            <p class="section__number reveal">Sobre mí</p>
+            <h2 class="section__title reveal">De la obra al <span class="text-gradient">dato</span></h2>
+          </div>
+          <p class="about__lead reveal">Analista de datos y desarrollador con más de dos años de experiencia en ambientes complejos. Construyo pipelines robustos con Python, APIs y SQL, siempre buscando resultados accionables.</p>
+        </div>
+
+        <div class="about__grid">
+          <div class="about__copy reveal">
+            <p>Mi perfil es analítico y orientado a la automatización. Trabajo con Python como lenguaje principal, apoyado en SQL, APIs REST, ETL y librerías de análisis para transformar datos en decisiones de negocio.</p>
+            <p>Más de dos años en el sector de la construcción me dieron una base sólida de liderazgo, planificación, comunicación y resiliencia. Hoy aplico esos mismos principios a proyectos de datos: estructura clara, control de calidad y ejecución eficiente.</p>
+          </div>
+
+          <div class="about__traits reveal">
+            <article class="trait-card">
+              <span class="trait-card__icon" aria-hidden="true">◆</span>
+              <h3>Mentalidad analítica</h3>
+              <p>Descompongo los problemas de datos en pasos verificables antes de automatizarlos.</p>
+            </article>
+            <article class="trait-card">
+              <span class="trait-card__icon" aria-hidden="true">◆</span>
+              <h3>Automatización</h3>
+              <p>Si se puede repetir, lo convierto en un pipeline estable y mantenible.</p>
+            </article>
+            <article class="trait-card">
+              <span class="trait-card__icon" aria-hidden="true">◆</span>
+              <h3>Backend y APIs</h3>
+              <p>Diseño integraciones Python-API para conectar datos y servicios de forma segura.</p>
+            </article>
+            <article class="trait-card">
+              <span class="trait-card__icon" aria-hidden="true">◆</span>
+              <h3>Comunicación efectiva</h3>
+              <p>Transformo datos técnicos en resultados claros para equipos y clientes.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de stack técnico dividido en categorías -->
+    <section class="section stack-section" id="stack">
+      <div class="container">
+        <div class="section__header">
+          <div>
+            <p class="section__number reveal">Stack técnico</p>
+            <h2 class="section__title reveal">Herramientas que uso a diario</h2>
           </div>
         </div>
 
-        <div class="timeline">
-          <article class="timeline__item reveal">
-            <span>En curso</span>
-            <h3>Bootcamp AI4Inclusion</h3>
-            <p>Análisis de datos, integración de IA y desarrollo de proyectos full-stack.</p>
+        <div class="stack-grid">
+          <article class="stack-card reveal" data-glow>
+            <h3>Lenguajes</h3>
+            <div class="stack-card__tags"><span>Python</span><span>SQL</span><span>JavaScript</span></div>
           </article>
-          <article class="timeline__item reveal">
-            <span>DAW</span>
-            <h3>FP Desarrollo de Aplicaciones Web</h3>
-            <p>Un año completado, con base en desarrollo web y aplicaciones.</p>
+          <article class="stack-card reveal" data-glow>
+            <h3>Backend</h3>
+            <div class="stack-card__tags"><span>FastAPI</span><span>Flask</span></div>
           </article>
-          <article class="timeline__item reveal">
-            <span>Formación continua</span>
-            <h3>Platzi + freeCodeCamp</h3>
-            <p>Curso básico de programación y ruta Full-Stack Developer en curso.</p>
+          <article class="stack-card reveal" data-glow>
+            <h3>Bases de datos</h3>
+            <div class="stack-card__tags"><span>PostgreSQL</span><span>MySQL</span><span>Supabase</span></div>
           </article>
-          <article class="timeline__item reveal">
-            <span>Bachillerato</span>
-            <h3>Ciencias</h3>
-            <p>Formación académica previa en el Colegio San Jose.</p>
+          <article class="stack-card reveal" data-glow>
+            <h3>Data</h3>
+            <div class="stack-card__tags"><span>Pandas</span><span>NumPy</span><span>Matplotlib</span><span>Plotly</span><span>Scikit-learn</span></div>
+          </article>
+          <article class="stack-card reveal" data-glow>
+            <h3>ETL</h3>
+            <div class="stack-card__tags"><span>Requests</span><span>BeautifulSoup</span><span>Playwright</span><span>Selenium</span><span>Scrapy</span></div>
+          </article>
+          <article class="stack-card reveal" data-glow>
+            <h3>Tools</h3>
+            <div class="stack-card__tags"><span>Git</span><span>GitHub</span><span>Docker</span><span>Postman</span><span>VSCode</span></div>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- Sección de proyectos con ejemplos de pipeline y scraping -->
     <section class="section projects-section" id="projects">
       <div class="container">
         <div class="section__header">
           <div>
-            <p class="section__number reveal">04 - Proyectos</p>
-            <h2 class="section__title reveal">Repositorio<br />personal</h2>
+            <p class="section__number reveal">Proyectos</p>
+            <h2 class="section__title reveal">De problema a pipeline</h2>
           </div>
-          <a href="https://github.com/GregDev08" class="section__link reveal" target="_blank" rel="noopener">Abrir GitHub</a>
+          <a class="section__link reveal" href="https://github.com/GregDev08" target="_blank" rel="noopener">Abrir GitHub</a>
         </div>
 
-        <div class="projects-grid">
-          <a class="project-card reveal" href="https://github.com/GregDev08" target="_blank" rel="noopener">
-            <div class="project-card__img project-card__img--web">
-              <div class="project-card__overlay">
-                <span class="project-card__overlay-label">VER EN GITHUB -&gt;</span>
-              </div>
+        <div class="projects-list">
+          <article class="project-card reveal" data-glow>
+            <div class="project-card__media project-card__media--weather" aria-hidden="true">
+              <span class="project-card__media-tag">EDA · APIs</span>
             </div>
-            <div class="project-card__info">
-              <div>
-                <h3 class="project-card__title">Portfolio virtual</h3>
-                <p class="project-card__summary">Landing personal responsive sincronizada con mi CV y animada con GSAP.</p>
+            <div class="project-card__body">
+              <div class="project-card__top">
+                <span class="project-card__category">Data Analytics</span>
+                <h3>The Big Data Theory</h3>
               </div>
-              <span class="project-card__tag">Frontend</span>
+              <dl class="project-card__facts">
+                <div><dt>Problema</dt><dd>No existía un sistema centralizado para obtener, almacenar y registrar datos climáticos en tiempo real.</dd></div>
+                <div><dt>Solución</dt><dd>Integración de la WeatherAPI para ingesta automática por horas, procesamiento del dataset y visualización de métricas ambientales.</dd></div>
+                <div><dt>Aporte técnico</dt><dd>Pipeline completo con extracción, limpieza, análisis y visualización en Python.</dd></div>
+              </dl>
+              <div class="project-card__tags"><span>Python</span><span>WeatherAPI</span><span>Seaborn</span><span>Matplotlib</span></div>
+              <div class="project-card__actions"><a class="btn-ghost btn-ghost--card" href="https://github.com/GregDev08" target="_blank" rel="noopener">GitHub<span aria-hidden="true">→</span></a></div>
             </div>
-          </a>
+          </article>
 
-          <a class="project-card reveal" href="https://github.com/GregDev08" target="_blank" rel="noopener">
-            <div class="project-card__img project-card__img--ai">
-              <div class="project-card__overlay">
-                <span class="project-card__overlay-label">AI + DATOS -&gt;</span>
-              </div>
+          <article class="project-card reveal" data-glow>
+            <div class="project-card__media project-card__media--market" aria-hidden="true">
+              <span class="project-card__media-tag">Scraping · EDA</span>
             </div>
-            <div class="project-card__info">
-              <div>
-                <h3 class="project-card__title">AI4Inclusion</h3>
-                <p class="project-card__summary">Prácticas full-stack con datos e inteligencia artificial.</p>
+            <div class="project-card__body">
+              <div class="project-card__top">
+                <span class="project-card__category">Web Scraping</span>
+                <h3>Market Data Monitor</h3>
               </div>
-              <span class="project-card__tag">Bootcamp</span>
+              <dl class="project-card__facts">
+                <div><dt>Problema</dt><dd>Faltaba información actualizada sobre las habilidades y tendencias del mercado de datos.</dd></div>
+                <div><dt>Solución</dt><dd>Pipeline de scraping sobre portales de empleo y análisis exploratorio con Plotly.</dd></div>
+                <div><dt>Aporte técnico</dt><dd>Captura automática, limpieza de datos y visualizaciones que resaltan la demanda de herramientas.</dd></div>
+              </dl>
+              <div class="project-card__tags"><span>Python</span><span>Scrapy</span><span>Pandas</span><span>Plotly</span></div>
+              <div class="project-card__actions"><a class="btn-ghost btn-ghost--card" href="https://github.com/GregDev08" target="_blank" rel="noopener">GitHub<span aria-hidden="true">→</span></a></div>
             </div>
-          </a>
-
-          <a class="project-card reveal" href="https://github.com/GregDev08" target="_blank" rel="noopener">
-            <div class="project-card__img project-card__img--api">
-              <div class="project-card__overlay">
-                <span class="project-card__overlay-label">BACKEND LAB -&gt;</span>
-              </div>
-            </div>
-            <div class="project-card__info">
-              <div>
-                <h3 class="project-card__title">APIs y bases de datos</h3>
-                <p class="project-card__summary">Prácticas con Python, FastAPI, SQL, PostgreSQL y MySQL.</p>
-              </div>
-              <span class="project-card__tag">Backend</span>
-            </div>
-          </a>
+          </article>
         </div>
+
+        <p class="projects-note reveal">Nuevos proyectos se añaden aquí a medida que se van completando.</p>
       </div>
     </section>
 
+    <!-- Sección de experiencia profesional y puente entre sectores -->
     <section class="section" id="experience">
       <div class="container">
         <div class="section__header">
           <div>
-            <p class="section__number reveal">05 - Experiencia</p>
-            <h2 class="section__title reveal">Stack<br />de lenguajes</h2>
+            <p class="section__number reveal">Experiencia</p>
+            <h2 class="section__title reveal">De la obra a la analítica</h2>
           </div>
         </div>
 
-        <div class="skills-grid">
-          <article class="skill-card reveal">
-            <span class="skill-card__num">01</span>
-            <h3>Frontend</h3>
-            <p>HTML5, CSS3, SCSS, JavaScript ES6+ y diseño responsive.</p>
-          </article>
-          <article class="skill-card reveal">
-            <span class="skill-card__num">02</span>
-            <h3>Backend</h3>
-            <p>Python, FastAPI, APIs REST y conocimientos básicos de PHP.</p>
-          </article>
-          <article class="skill-card reveal">
-            <span class="skill-card__num">03</span>
-            <h3>Bases de datos</h3>
-            <p>PostgreSQL, SQL y MySQL para estructurar datos de aplicaciones.</p>
-          </article>
-          <article class="skill-card reveal">
-            <span class="skill-card__num">04</span>
-            <h3>Herramientas</h3>
-            <p>Git, GitHub, WordPress básico, gestión del tiempo y trabajo en equipo.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section cv-section" id="cv">
-      <div class="container cv-panel reveal">
-        <div>
-          <p class="section__number">06 - CV</p>
-          <h2 class="section__title">Perfil<br />en PDF</h2>
-        </div>
-        <div class="cv-panel__content">
-          <p>
-            El CV está integrado dentro del proyecto para que puedas abrirlo o
-            descargarlo desde la landing sin depender de archivos externos.
-          </p>
-          <div class="cv-panel__actions">
-            <a href="assets/CV-Jose-Melo.pdf" class="btn-primary" target="_blank" rel="noopener">Abrir CV</a>
-            <a href="assets/CV-Jose-Melo.pdf" class="btn-ghost" download>Descargar PDF</a>
+        <article class="exp-item reveal">
+          <div class="exp-item__meta">
+            <span class="exp-item__period">jun. 2023 — mar. 2026 · 2 años 9 meses</span>
+            <h3>Oficial de Estructuras Metálicas</h3>
+            <span class="exp-item__org">ATES / JOHUPA MONTAJES SL</span>
           </div>
-        </div>
+          <div class="exp-item__body">
+            <p>Planificación y coordinación de proyectos técnicos de alta complejidad, liderando equipos en obra y gestionando flujos de trabajo con múltiples dependencias bajo presión.</p>
+            <div class="exp-item__skills"><span>Liderazgo</span><span>Planificación</span><span>Comunicación</span><span>Resolución</span><span>Trabajo en equipo</span></div>
+            <p class="exp-item__bridge">→ Esta experiencia fortaleció mi capacidad para planificar, priorizar y entregar soluciones técnicas con rigor, una habilidad que ahora aplico a la ingeniería de datos y automatización.</p>
+          </div>
+        </article>
       </div>
     </section>
 
+    <!-- Sección de contacto con formulario y enlaces directos -->
     <section class="section cta-section" id="contact">
-      <div class="container">
-        <h2 class="cta-section__title reveal">
-          HABLEMOS<br />DE <em>CÓDIGO</em><br />Y PRODUCTO
-        </h2>
-        <p class="cta-section__sub reveal">
-          Disponible para oportunidades junior, prácticas y proyectos donde
-          pueda aportar frontend, backend ligero y ganas de construir.
-        </p>
-        <div class="contact-links reveal">
-          <a href="mailto:jogregorio297@gmail.com" class="btn-primary cta-section__email">jogregorio297@gmail.com</a>
+      <div class="container contact-grid">
+        <div class="contact-intro reveal">
+          <p class="section__number">Contacto</p>
+          <h2 class="cta-section__title">Hablemos de <span class="text-gradient">datos</span></h2>
+          <p class="cta-section__sub">Disponible para roles de Python Developer, Data Analyst, Data Engineer y Automation Developer.</p>
+          <ul class="contact-list">
+            <li><span>Email</span><a href="mailto:jogregorio297@gmail.com">jogregorio297@gmail.com</a></li>
+            <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/jose-melo-ramirez/" target="_blank" rel="noopener">jose-melo-ramirez</a></li>
+            <li><span>GitHub</span><a href="https://github.com/GregDev08" target="_blank" rel="noopener">GregDev08</a></li>
+            <li><span>CV</span><a href="assets/CV_Jose_Melo_v2.pdf" target="_blank" rel="noopener">Descargar PDF</a></li>
+          </ul>
         </div>
+
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <div class="contact-form__row">
+            <label for="cf-name">Nombre</label>
+            <input id="cf-name" name="name" type="text" required autocomplete="name" />
+          </div>
+          <div class="contact-form__row">
+            <label for="cf-email">Email</label>
+            <input id="cf-email" name="email" type="email" required autocomplete="email" />
+          </div>
+          <div class="contact-form__row">
+            <label for="cf-message">Mensaje</label>
+            <textarea id="cf-message" name="message" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary contact-form__submit">Enviar mensaje<span aria-hidden="true">→</span></button>
+          <p class="contact-form__note" id="contactFormNote">Se abrirá tu cliente de correo para enviar este mensaje.</p>
+        </form>
       </div>
     </section>
   </main>
 
+  <!-- Pie de página con enlaces importantes -->
   <footer class="footer">
-    <div class="container">
-      <div class="footer__inner">
-        <div class="footer__logo">JM</div>
-        <ul class="footer__links">
-          <li><a href="https://github.com/GregDev08" target="_blank" rel="noopener">GitHub</a></li>
-          <li><a href="https://www.linkedin.com/in/jose-melo-ramirez-078126266/" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="assets/CV-Jose-Melo.pdf" target="_blank" rel="noopener">CV</a></li>
-        </ul>
-        <p class="footer__copy">© 2026 Jose Melo. Madrid.</p>
-      </div>
+    <div class="container footer__inner">
+      <div class="footer__logo">Jose Melo</div>
+      <ul class="footer__links">
+        <li><a href="https://github.com/GregDev08" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/jose-melo-ramirez/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="mailto:jogregorio297@gmail.com">Email</a></li>
+      </ul>
+      <p class="footer__copy">© 2026 Jose Melo. Madrid.</p>
     </div>
   </footer>
 
-  <script src="main.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
